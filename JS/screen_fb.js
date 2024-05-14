@@ -116,8 +116,11 @@ $(function () {
             $('#scoreboard-1 .scoreboard-team-score svg text').html(data.team_1_score)
             $('#scoreboard-2 .scoreboard-team-name svg text').html(data.team_2_name)
             $('#scoreboard-2 .scoreboard-team-score svg text').html(data.team_2_score)
+          
+            con.scaletext()
         });
       
+      /*
       var timeout;
       
       function loop(){
@@ -132,6 +135,7 @@ $(function () {
       }
       
       loop();
+      */
 
     }(window.CONTROLLER = window.CONTROLLER || {}));
 });
