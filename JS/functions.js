@@ -57,7 +57,7 @@ $(function () {
 
             con.scl('.br-total-text');
             con.scl('.br-total-score');
-            con.scl('.question-score div');
+            //con.scl('.question-score div');
             //con.scl('.timer');
             con.scl('#team-1-score div');
             con.scl('#team-2-score div');
@@ -130,6 +130,7 @@ $(function () {
                 back.css({'transform': 'rotateX(0deg)', 'opacity': '1'})
                 front.css({'transform': 'rotateX(180deg)', 'opacity': '0'})
             }
+            //con.scl('.question-score div');
         }
 
         con.crosspop = function(x){
