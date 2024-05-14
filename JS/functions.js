@@ -180,7 +180,7 @@ $(function () {
                 }, 350)
             }
             else if (step == 1) {
-                square.css({ 'opacity': '1', 'left': '27.65vw' });
+                //square.css({ 'opacity': '1', 'left': '27.65vw' });
                 con.redsquareblink(num,1);
                 text.css({ 'opacity': '1', 'width': '83.5%' });
             }
