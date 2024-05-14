@@ -468,7 +468,13 @@ $(function () {
             setTimeout(function () {
                 upd('ans_' + id + '_open', ans_open[id - 1])
             }, 1000);
-            var score = parseInt($('#ans-' + id + ' .ans-score').html());
+            var score = parseInt($('#ans-' + id + ' .ans-score').html());;
+            if (is_doubling == true) {
+                score *= 2;
+            }
+            else if (is_tripling == true) {
+                score *= 3;
+            }
             if (ans_open[id - 1] == 1) {
                 $(this).css('background-color', 'rgb(3, 37, 3)')
                 if (is_adding_to_total == true) {
@@ -530,13 +536,7 @@ $(function () {
         //
 
         $('#h3-1-obj2').click(function () {
-            var sc = total_score;
-            if (is_doubling == true) {
-                sc *= 2;
-            }
-            else if (is_tripling == true) {
-                sc *= 3;
-            }
+            var sc = total_score
             if (is_adding_to_winning_team == true) {
                 team_1_score += sc;
                 upd('team_1_score', team_1_score);
@@ -556,12 +556,6 @@ $(function () {
 
         $('#h3-1-obj3').click(function () {
             var sc = total_score;
-            if (is_doubling == true) {
-                sc *= 2;
-            }
-            else if (is_tripling == true) {
-                sc *= 3;
-            }
             if (is_adding_to_winning_team == true) {
                 team_2_score += sc;
                 upd('team_2_score', team_2_score);
