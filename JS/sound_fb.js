@@ -36,6 +36,14 @@ $(function () {
               con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/nh%E1%BA%A1c%20b%E1%BA%AFt%20%C4%91%E1%BA%A7u%20v%C3%B2ng%20thi.mp3?v=1715746745718',1)
               update(ref(db), { sd_round : 0 })
             }
+            if(data.sd_round_win == 1){
+              con.PlaySound('',1)
+              update(ref(db), { sd_round_win : 0 })
+            }
+            if(data.sd_2_players_chosen == 1){
+              con.PlaySound('',1)
+              update(ref(db), { sd_2_players_chosen : 0 })
+            }
 
             if(data.sd_stop_sounds == 1){
               con.StopAllSounds()
