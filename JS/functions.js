@@ -239,6 +239,9 @@ $(function () {
                     $('.ans-iterator').removeClass('reveal-iterator-key')
                 }, 1000)
             }
+            if(4 <= num && num <= 8){
+                update(ref(db))
+            }
         }
 
         con.revealanswer = function (x, y) {

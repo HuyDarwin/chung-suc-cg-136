@@ -574,7 +574,7 @@ $(function () {
         })
 
         $('.reveal-ans').click(function () {
-            upd('reveal_ans', 11)
+            upd('sd_reveal_iterator_')
             setTimeout(function () {
                 upd('reveal_ans', 1)
             }, 1000)
