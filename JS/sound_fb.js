@@ -25,8 +25,12 @@ $(function () {
               update(ref(db), { sd_credits : 0 })
             }
             if(data.sd_comm_in == 1){
-              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/nh%E1%BA%A1c%20k%E1%BA%BFt%20th%C3%BAc.mp3?v=1715746741708',1)
+              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/nh%E1%BA%A1c%20v%C3%B4%20gi%E1%BA%A3i%20lao.mp3?v=1715746744890',1)
               update(ref(db), { sd_comm_in : 0 })
+            }
+            if(data.sd_comm_out == 1){
+              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/nh%E1%BA%A1c%20h%C3%ACnh%20hi%E1%BB%87u%20k%E1%BA%BFt%20th%C3%BAc%20gi%E1%BA%A3i%20lao.mp3?v=1715746740323',1)
+              update(ref(db), { sd_comm_out : 0 })
             }
             if(data.sd_round == 1){
               con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/nh%E1%BA%A1c%20b%E1%BA%AFt%20%C4%91%E1%BA%A7u%20v%C3%B2ng%20thi.mp3?v=1715746745718',1)
