@@ -778,6 +778,12 @@ $(function () {
             upd('br_q_choosing', br_q_choosing)
             $('.br-q-choose').html('Question ' + br_q_choosing)
         })
+      
+        //
+      
+        $('.play-sounds').click(function(){
+          upd('sd_' + this.id, 1)
+        })
 
         //
 

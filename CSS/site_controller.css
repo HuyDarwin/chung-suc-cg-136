@@ -622,3 +622,16 @@ input{
     background-color:#03081d;
     border:0.05vw solid gray;
 }
+
+.h6-hold{
+    width:99%;
+    height:98%;
+    left:0.5%;
+    top:1%;
+}
+
+.h6-hold button {
+	position:static;
+  margin-bottom:0.1vw;
+  font-size:1.2vw;
+}
