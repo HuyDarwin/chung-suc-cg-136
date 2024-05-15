@@ -91,17 +91,21 @@ $(function () {
               update(ref(db), { sd_reveal_br_ans_score : 0 })
             }
             if(data.sd_br_wrong == 1){
-              con.PlaySound('',3)
+              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/Family_Feud_2010_file_FF201021.mp3?v=1715770711647',3)
               update(ref(db), { sd_br_wrong : 0 })
             }
             if(data.sd_br_finished == 1){
-              con.PlaySound('',3)
+              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/Family_Feud_2010_file_FF201023.mp3?v=1715770707935',3)
               update(ref(db), { sd_br_finished : 0 })
             }     
           
             if(data.sd_timer_20s == 1){
-              
+              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/Family_Feud_2010_file_FF201010.mp3?v=1715770709335',4)
               update(ref(db), { sd_timer_20s : 0 })
+            }
+            if(data.sd_timer_25s == 1){
+              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/Family_Feud_2010_file_FF201011.mp3?v=1715770710979',4)
+              update(ref(db), { sd_timer_25s : 0 })
             }
 
             if(data.sd_stop_sounds == 1){

@@ -706,6 +706,7 @@ $(function () {
             //upd('br_ans_player_score_input_' + id, 0)
         })
 
+        var timeout20,timeout25;
         $('#h3-hold-0 #timer-20, #h3-hold-2 #timer-20').click(function () {
             timer_20_count = (timer_20_count + 1) % 3;
             upd('timer_20_count', timer_20_count);
@@ -713,15 +714,17 @@ $(function () {
                 timec = 1;
                 upd('timec', timec);
                 $('#h1-obj5').css('background-color', 'rgb(3, 37, 3)')
-
+                
+                upd('sd_reveal_br_ans_score',1)
                 con.playtimer(20);
                 $('#h3-hold-0 #timer-20, #h3-hold-2 #timer-20').css('background-color', 'rgb(3, 37, 3)')
             }
             else if (timer_20_count == 2) {
                 con.playtimer(20, 1);
+                upd('sd_timer_20s',1)
                 $('#h3-hold-0 #timer-20, #h3-hold-2 #timer-20').css('background-color', 'black')
                 dib('.timer')
-                setTimeout(function () {
+                timeout20 = setTimeout(function () {
                     enb('.timer')
                     timer_20_count = 0;
                     upd('timer_20_count', timer_20_count);
@@ -738,14 +741,16 @@ $(function () {
             upd('timer_25_count', timer_25_count);
             if (timer_25_count == 1) {
                 $('#h1-obj4').click();
+                upd('sd_reveal_br_ans_score',1)
                 con.playtimer(25);
                 $('#h3-hold-0 #timer-25, #h3-hold-2 #timer-25').css('background-color', 'rgb(3, 37, 3)')
             }
             else if (timer_25_count == 2) {
                 con.playtimer(25, 1);
+                upd('sd_timer_25s',1)
                 $('#h3-hold-0 #timer-25, #h3-hold-2 #timer-25').css('background-color', 'black')
                 dib('.timer')
-                setTimeout(function () {
+                timeout25 = setTimeout(function () {
                     enb('.timer')
                     timer_25_count = 0;
                     upd('timer_25_count', timer_25_count);
@@ -755,6 +760,20 @@ $(function () {
                 $('#h3-hold-0 #timer-25, #h3-hold-2 #timer-25').css('background-color', 'black')
                 enb('.timer')
             }
+        })
+      
+        $('.br-wrong').click(function(){
+          upd('sd_br_wrong',1)
+        })
+      
+        $('.br-finished').click(function(){
+          upd('sd_stop_sounds',1)
+          upd('sd_br_finished',1)
+          con.pausetimer()
+          enb('.timer')
+          timer_25_count = 0;
+          upd('timer_25_count', timer_25_count);
+          clearTimeout(timeout20)
         })
 
         $('.reset-br').click(function () {
