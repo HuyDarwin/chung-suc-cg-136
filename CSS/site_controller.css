@@ -480,8 +480,24 @@ input{
     font-size:1.2vw;    
 }
 
-.reset-br{
+.br-wrong{
     left:42%;
+    top:71%;
+    height:9%;
+    width:12%;
+    font-size:1.2vw;     
+}
+
+.br-finished{
+    left:54.5%;
+    top:71%;
+    height:9%;
+    width:11%;
+    font-size:1.2vw;     
+}
+
+.reset-br{
+    left:66%;
     top:71%;
     height:9%;
     width:11%;

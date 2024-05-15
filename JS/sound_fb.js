@@ -90,6 +90,19 @@ $(function () {
               con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/nh%E1%BA%A1c%20hi%E1%BB%87n%20s%E1%BB%91%20%C4%91i%E1%BB%83m%20v%C4%91b.mp3?v=1715746739477',3)
               update(ref(db), { sd_reveal_br_ans_score : 0 })
             }
+            if(data.sd_br_wrong == 1){
+              con.PlaySound('',3)
+              update(ref(db), { sd_br_wrong : 0 })
+            }
+            if(data.sd_br_finished == 1){
+              con.PlaySound('',3)
+              update(ref(db), { sd_br_finished : 0 })
+            }     
+          
+            if(data.sd_timer_20s == 1){
+              
+              update(ref(db), { sd_timer_20s : 0 })
+            }
 
             if(data.sd_stop_sounds == 1){
               con.StopAllSounds()

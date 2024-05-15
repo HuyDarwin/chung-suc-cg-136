@@ -351,6 +351,7 @@ $(function () {
             }
         }
 
+        var timeout_loop;
         con.playtimer = function(time,start=0){
             timer = time;
             update(ref(db), { timer : time })
@@ -359,11 +360,15 @@ $(function () {
                     if(timer > 0){
                         timer--;
                         update(ref(db), { timer : timer })
-                        setTimeout(loop, 1000);
+                        timeout_loop = setTimeout(loop, 1000);
                     }
                 }
-                setTimeout(loop, 1000);
+                timeout_loop = setTimeout(loop, 1000);
             }
+        }
+      
+        con.pausetimer = function(){
+          clearTimeout(timeout_loop)
         }
 
     }(window.CONTROLLER = window.CONTROLLER || {}));
