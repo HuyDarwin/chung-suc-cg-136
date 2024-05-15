@@ -771,9 +771,12 @@ $(function () {
           upd('sd_br_finished',1)
           con.pausetimer()
           enb('.timer')
+          timer_20_count = 0;
           timer_25_count = 0;
+          upd('timer_20_count', timer_25_count);
           upd('timer_25_count', timer_25_count);
           clearTimeout(timeout20)
+          clearTimeout(timeout25)
         })
 
         $('.reset-br').click(function () {
