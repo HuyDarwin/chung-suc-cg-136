@@ -481,6 +481,7 @@ $(function () {
                     total_score += score;
                     upd('total_score', total_score)
                 }
+                upd('sd_reveal_ans',1)
             }
             else if (ans_open[id - 1] == 0) {
                 $(this).css('background-color', 'black')
@@ -536,7 +537,7 @@ $(function () {
         //
 
         $('#h3-1-obj2').click(function () {
-            var sc = total_score
+            var sc = total_score;
             if (is_adding_to_winning_team == true) {
                 team_1_score += sc;
                 upd('team_1_score', team_1_score);
@@ -552,6 +553,7 @@ $(function () {
             score_backdrop = true;
             upd('score_backdrop', 1)
             $('#score-backdrop').prop('checked', true)
+            upd('sd_round_win',1)
         })
 
         $('#h3-1-obj3').click(function () {
@@ -571,14 +573,19 @@ $(function () {
             score_backdrop = true;
             upd('score_backdrop', 1)
             $('#score-backdrop').prop('checked', true)
+            upd('sd_round_win',1)
         })
 
         $('.reveal-ans').click(function () {
-            upd('sd_reveal_iterator_')
+            upd('reveal_ans',11)
             setTimeout(function () {
                 upd('reveal_ans', 1)
             }, 1000)
             dib('.reveal-ans')
+            var num = parseInt($('#num-ans').val())
+            if(4 <= num && num <= 8){
+                update(ref(db), { ['sd_reveal_iterator_' + num] : 1 })
+            }
         })
 
         $('.reset-ans').click(function () {
@@ -613,14 +620,17 @@ $(function () {
 
         $('#cross-1').click(function () {
             upd('cross_1', 1);
+            upd('sd_wrong', 1)
         })
 
         $('#cross-2').click(function () {
             upd('cross_2', 1);
+            upd('sd_wrong', 1)
         })
 
         $('#cross-3').click(function () {
             upd('cross_3', 1);
+            upd('sd_wrong', 1)
         })
 
         //
@@ -644,6 +654,7 @@ $(function () {
                 $(rev).css('background-color', 'rgb(3, 37, 3)')
                 enb(rev)
                 enb(hid)
+                upd('sd_reveal_br_ans',1)
             }
             else if (br_ans_open[id - 1] == 2) {
                 upd('br_ans_player_input_' + id, ans_inp)
@@ -653,6 +664,7 @@ $(function () {
                 enb(hid)
                 total_score += sco_inp;
                 upd('total_score', total_score)
+                upd('sd_reveal_br_ans_score',1)
             }
 
             if (br_ans_open[id - 1] != 1) {
