@@ -316,14 +316,14 @@ $(function () {
             if (step == 11) {
                 square.css({ 'opacity': '1', 'left': '0%' });
                 con.redsquareblink(num,1);
-                square.animate({ 'left': '87.25%' }, 450, 'linear');
+                square.animate({ 'left': '87.75%' }, 450, 'linear');
                 text.addClass('wipe-text-key')
                 setTimeout(function(){
                     text.removeClass('wipe-text-key')
                 }, 350)
             }
             else if (step == 1) {
-                //square.css({ 'opacity': '1', 'left': '27.65vw' });
+                square.css({ 'opacity': '1', 'left': '87.75%' });
                 con.redsquareblink(num,1);
                 text.css({ 'opacity': '1', 'width': '83.5%' });
             }

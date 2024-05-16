@@ -87,7 +87,7 @@ $(function () {
               update(ref(db), { sd_reveal_br_ans : 0 })
             }
             if(data.sd_reveal_br_ans_score == 1){
-              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/nh%E1%BA%A1c%20hi%E1%BB%87n%20s%E1%BB%91%20%C4%91i%E1%BB%83m%20v%C4%91b.mp3?v=1715746739477',3)
+              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/Family_Feud_2010_file_FF201020.mp3?v=1715873757004',3)
               update(ref(db), { sd_reveal_br_ans_score : 0 })
             }
             if(data.sd_br_wrong == 1){
