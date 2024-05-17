@@ -490,6 +490,8 @@ $(function () {
                     upd('total_score', total_score)
                 }
             }
+          
+            upd('scale_all_text',1)
         })
 
         $('#is-adding-to-total').change(function () {

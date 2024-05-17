@@ -119,6 +119,11 @@ $(function () {
             if(data.camera_url_input != null){
                 con.loadcamera(data.camera_url_input)
             }
+          
+            if(data.scale_all_text == 1){
+              con.scaletext()
+              update(ref(db), { scale_all_text : 0 })
+            }
 
             $('#scoreboard-1 .scoreboard-team-name svg text').html(data.team_1_name)
             $('#scoreboard-1 .scoreboard-team-score svg text').html(data.team_1_score)
