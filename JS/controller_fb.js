@@ -741,7 +741,7 @@ $(function () {
             upd('timer_25_count', timer_25_count);
             if (timer_25_count == 1) {
                 $('#h1-obj4').click();
-                upd('sd_reveal_br_ans_score',1)
+                //upd('sd_reveal_br_ans_score',1)
                 con.playtimer(25);
                 $('#h3-hold-0 #timer-25, #h3-hold-2 #timer-25').css('background-color', 'rgb(3, 37, 3)')
             }
