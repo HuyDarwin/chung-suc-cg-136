@@ -801,6 +801,7 @@ $(function () {
 
         $('.camera-url-input-submit').click(function () {
             upd('camera_url_input', $('.camera-url-input').val())
+            upd('change_camera_url',1)
         })
 
         //

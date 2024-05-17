@@ -116,8 +116,9 @@ $(function () {
                 con.revealbrans(i, eval('data.br_ans_' + i + '_open'))
             }
 
-            if(data.camera_url_input != null){
+            if(data.camera_url_input != null && data.change_camera_url == 1){
                 con.loadcamera(data.camera_url_input)
+                update(ref(db), { change_camera_url : 0 })
             }
           
             if(data.scale_all_text == 1){
