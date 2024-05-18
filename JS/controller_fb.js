@@ -71,11 +71,14 @@ $(function () {
                 $('#br-question-' + i).html(eval('data.br_q_' + i + '_q'))
             }
 
-            $('.br-q-text').html(eval('data.br_q_' + data.br_q_choosing + '_q'))
-            for (var i = 1; i <= 8; i++) {
-                $('#br-right-ans-' + i + ' .br-ans-text').html(eval('data.br_q_' + data.br_q_choosing + '_a_t_' + i))
-                $('#br-right-ans-' + i + ' .br-ans-score').html(eval('data.br_q_' + data.br_q_choosing + '_a_s_' + i))
+            if(data.br_q_choosing >= 1 && data.br_q_choosing <= 5){
+                $('.br-q-text').html(eval('data.br_q_' + data.br_q_choosing + '_q'))
+                for (var i = 1; i <= 8; i++) {
+                    $('#br-right-ans-' + i + ' .br-ans-text').html(eval('data.br_q_' + data.br_q_choosing + '_a_t_' + i))
+                    $('#br-right-ans-' + i + ' .br-ans-score').html(eval('data.br_q_' + data.br_q_choosing + '_a_s_' + i))
+                }             
             }
+
         });
 
         //
