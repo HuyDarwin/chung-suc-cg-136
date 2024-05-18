@@ -28,6 +28,7 @@ textarea {
 	background-color:black;
 	color:white;
 	border-radius:0;
+  white-space: pre-line;
 }
 
 label{
@@ -203,7 +204,7 @@ input{
     top:18%;
     width:23%;
     height:13%;
-    font-size:1vw;    
+    font-size:1vw;   
 }
 
 .team-player-info{
@@ -211,7 +212,6 @@ input{
     width:23%;
     height:60%;
     font-size:1vw;  
-    white-space: nowrap;  
 }
 
 #team-player-name-1, #team-player-info-1{
