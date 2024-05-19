@@ -111,7 +111,7 @@ $(function () {
             }
 
             for (var i = 1; i <= 10; i++) {
-                $('#br-ans-' + i + ' .br-ans-text svg text').html(eval('data.br_ans_player_input_' + i));
+                $('#br-ans-' + i + ' .br-ans-text svg text').html(eval('data.br_ans_player_input_' + i).toUpperCase());
                 $('#br-ans-' + i + ' .br-ans-score svg text').html(eval('data.br_ans_player_score_input_' + i));
                 con.revealbrans(i, eval('data.br_ans_' + i + '_open'))
             }

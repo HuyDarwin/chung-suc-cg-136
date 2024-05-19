@@ -189,24 +189,24 @@ $(function () {
         con.scaletext = function () {
             for (var i = 1; i <= 8; i++) {
                 con.scl('#ans-' + i + ' .ans-text');
-                con.scl('#ans-' + i + ' .ans-score');
+                //con.scl('#ans-' + i + ' .ans-score');
             }
 
             for (var i = 1; i <= 10; i++) {
                 con.scl('#br-ans-' + i + ' .br-ans-text');
-                con.scl('#br-ans-' + i + ' .br-ans-score');
+               // con.scl('#br-ans-' + i + ' .br-ans-score');
             }
 
             con.scl('.br-total-text');
-            con.scl('.br-total-score');
+            //con.scl('.br-total-score');
             //con.scl('.question-score div');
             //con.scl('.timer');
-            con.scl('#team-1-score div');
-            con.scl('#team-2-score div');
-            con.scl('#scoreboard-1 .scoreboard-team-name');
-            con.scl('#scoreboard-1 .scoreboard-team-score');
-            con.scl('#scoreboard-2 .scoreboard-team-name');
-            con.scl('#scoreboard-2 .scoreboard-team-score');
+            //con.scl('#team-1-score div');
+            //con.scl('#team-2-score div');
+            //con.scl('#scoreboard-1 .scoreboard-team-name');
+            //con.scl('#scoreboard-1 .scoreboard-team-score');
+            //con.scl('#scoreboard-2 .scoreboard-team-name');
+            //con.scl('#scoreboard-2 .scoreboard-team-score');
         }
 
         con.updatequestion = function (num) {
