@@ -10,9 +10,9 @@ $(function () {
 
         const db = getDatabase();
 
-        con.updatequestion();
-        con.scaletext();
-        con.loadcamera('');
+        //con.updatequestion();
+        //con.scaletext();
+        //con.loadcamera('');
 
         onValue(ref(db), (snapshot) => {
             const data = snapshot.val();
