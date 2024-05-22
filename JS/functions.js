@@ -36,7 +36,7 @@ $(function () {
             try{			
               at =  new Audio(filename);
               at.play();
-              at.volume = 0.2;
+              at.volume = 0.5;
             }
             catch(e){
               // do nothing
@@ -46,7 +46,7 @@ $(function () {
             try{			
               at2 =  new Audio(filename);
               at2.play();
-              at2.volume = 0.2;
+              at2.volume = 0.5;
             }
             catch(e){
               // do nothing
@@ -56,7 +56,7 @@ $(function () {
             try{			
               at3 =  new Audio(filename);
               at3.play();
-              at3.volume = 0.2;
+              at3.volume = 0.5;
             }
             catch(e){
               // do nothing
@@ -66,7 +66,7 @@ $(function () {
             try{			
               at4 =  new Audio(filename);
               at4.play();
-              at4.volume = 0.15;
+              at4.volume = 0.4;
             }
             catch(e){
               // do nothing
@@ -76,7 +76,7 @@ $(function () {
             try{			
               at5 =  new Audio(filename);
               at5.play();
-              at5.volume = 0.1;
+              at5.volume = 0.2;
             }
             catch(e){
               // do nothing
