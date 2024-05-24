@@ -71,7 +71,7 @@ body{
 
 .ans-text svg text{
     font-family:'SVN-Gotham Bold';
-    font-size:4vw;
+    font-size:3.8vw;
     fill:white;
 }
 
@@ -90,9 +90,9 @@ body{
 }
 
 .ans-score svg text{
-    font-family:'Aptos';
+    font-family:'SFU Helvetica';
     font-weight:bold;
-    font-size:4vw;
+    font-size:3.8vw;
     fill:white;
 }
 
@@ -301,7 +301,8 @@ body{
 }
 
 .br-ans-score svg text{
-    font-family:'SVN-Gotham Bold';
+    font-family:'SFU Helvetica';
+    font-weight:bold;
     font-size:2.5vw;
     fill:white;
 }
@@ -410,7 +411,8 @@ body{
 }
 
 .br-total-score svg text{
-    font-family:'SVN-Gotham Bold';
+    font-family:'SFU Helvetica';
+    font-weight:bold;
     font-size:2.5vw;
     fill:white;
 }
