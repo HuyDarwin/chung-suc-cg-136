@@ -8,6 +8,15 @@
 }
 
 @font-face {
+    font-family: 'SFU Helvetica';
+    src: url('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/SFUHelveticaCondensedBold.woff2?v=1716556001760') format('woff2'),
+        url('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/SFUHelveticaCondensedBold.woff?v=1716556000790') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'Aptos';
     src: url('../Fonts/Aptos.woff2') format('woff2'),
         url('../Fonts/Aptos.woff') format('woff');

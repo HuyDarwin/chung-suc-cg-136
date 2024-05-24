@@ -70,8 +70,9 @@ body{
 }
 
 .ans-text svg text{
-    font-family:'SFU Helvetica';
-    font-weight:bold;
+    font-family: 'SFU Helvetica';
+    font-weight: bold;
+    font-style: normal;
     font-size:3.75vw;
     fill:white;
 }
@@ -91,8 +92,9 @@ body{
 }
 
 .ans-score svg text{
-    font-family:'SFU Helvetica';
-    font-weight:bold;
+    font-family: 'SFU Helvetica';
+    font-weight: bold;
+    font-style: normal;
     font-size:3.75vw;
     fill:white;
 }
@@ -214,8 +216,9 @@ body{
 }
 
 .question-score div svg text, .team-score div svg text{
-    font-family:'SFU Helvetica';
-    font-weight:bold;
+    font-family: 'SFU Helvetica';
+    font-weight: bold;
+    font-style: normal;
     font-size:6vw;
     fill:white;    
 }
@@ -281,8 +284,9 @@ body{
 }
 
 .br-ans-text svg text{
-    font-family:'SFU Helvetica';
-    font-weight:bold;
+    font-family: 'SFU Helvetica';
+    font-weight: bold;
+    font-style: normal;
     font-size:2.5vw;
     fill:white;
 }
@@ -303,8 +307,9 @@ body{
 }
 
 .br-ans-score svg text{
-    font-family:'SFU Helvetica';
-    font-weight:bold;
+    font-family: 'SFU Helvetica';
+    font-weight: bold;
+    font-style: normal;
     font-size:2.5vw;
     fill:white;
 }
@@ -392,8 +397,9 @@ body{
 }
 
 .br-total-text svg text{
-    font-family:'SFU Helvetica';
-    font-weight:bold;
+    font-family: 'SFU Helvetica';
+    font-weight: bold;
+    font-style: normal;
     font-size:2.25vw;
     fill:white;
 }
@@ -414,8 +420,9 @@ body{
 }
 
 .br-total-score svg text{
-    font-family:'SFU Helvetica';
-    font-weight:bold;
+    font-family: 'SFU Helvetica';
+    font-weight: bold;
+    font-style: normal;
     font-size:2.25vw;
     fill:white;
 }
@@ -454,8 +461,9 @@ body{
 }
 
 .timer svg text{
-    font-family:'SFU Helvetica';
-    font-weight:bold;
+    font-family: 'SFU Helvetica';
+    font-weight: bold;
+    font-style: normal;
     font-size:5.25vw;
     fill:white;
 }
@@ -485,8 +493,9 @@ body{
 }
 
 .scoreboard-team-name svg text{
-    font-family:'SFU Helvetica';
-    font-weight:bold;
+    font-family: 'SFU Helvetica';
+    font-weight: bold;
+    font-style: normal;
     font-size:5vw;
     fill:white;
 }
@@ -506,8 +515,9 @@ body{
 }
 
 .scoreboard-team-score svg text{
-    font-family:'SFU Helvetica';
-    font-weight:bold;
+    font-family: 'SFU Helvetica';
+    font-weight: bold;
+    font-style: normal;
     font-size:9vw;
     fill:white;
 }
