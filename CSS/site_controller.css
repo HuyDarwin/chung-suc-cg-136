@@ -654,11 +654,27 @@ input{
     border:0.05vw solid gray;
 }
 
+#h6-hold-1{
+    width:99%;
+    height:18%;
+    left:0.5%;
+    top:0.5%;
+    background-color:red;
+}
+
+.who-buzzers{
+  left:14%;
+  width:84%;
+  top:1%;
+  height:35%;
+  font-size:1.25vw;
+}
+
 #h6-hold-2{
     width:99%;
-    height:50%;
+    height:90%;
     left:0.5%;
-    top:49%;
+    top:19%;
 }
 
 #h6-hold-2 button {
