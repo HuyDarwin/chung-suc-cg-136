@@ -654,14 +654,14 @@ input{
     border:0.05vw solid gray;
 }
 
-.h6-hold{
+#h6-hold-2{
     width:99%;
-    height:98%;
+    height:50%;
     left:0.5%;
-    top:1%;
+    top:49%;
 }
 
-.h6-hold button {
+#h6-hold-2 button {
 	position:static;
   margin-bottom:0.1vw;
   font-size:1.2vw;

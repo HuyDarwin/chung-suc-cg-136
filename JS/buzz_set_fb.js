@@ -13,6 +13,8 @@ $(function () {
             const data = snapshot.val();
           
             if(data.buzzer_active == 1){
+              update(ref(db), { buzzer_enabled : 0 })
+              
               $('.buzz-team').css('opacity', 0)
               if(data.buzzer_team == 1){
                 $('#buzz-team-1').css('opacity', 1).trigger('play')
@@ -20,6 +22,7 @@ $(function () {
               else if(data.buzzer_team == 2){
                 $('#buzz-team-2').css('opacity', 1).trigger('play')
               }
+              
               update(ref(db), { buzzer_active : 0 })
             }
         });
