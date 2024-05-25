@@ -8,21 +8,25 @@
         <script type="text/javascript" src="JS/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="JS/jquery.keyframes.min.js"></script>
         <script type='module' src='JS/firebase.js'></script>	
-        <script type='module' src='JS/functions.js'></script>	
-        <script type="module" src="JS/sound_fb.js"></script>
-        <script type="module" src="JS/index_fb.js"></script>
+        <script type='module' src='JS/functions.js'></script>
+        <script type="module" src="JS/buzz_set_fb.js"></script>
         
         <link rel="stylesheet" type="text/css" href="CSS/reset.css">
         <link rel="stylesheet" type="text/css" href="CSS/site.css">
-        <link rel="stylesheet" type="text/css" href="CSS/site_index.css">
+        <link rel="stylesheet" type="text/css" href="CSS/site_buzzset.css">
 
         <meta charset="UTF-8" />
     </head>
     <body>
       <div class="holder" id="buzzer-set-holder">
         <img class="https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/445994930_792214999297345_3602198852860167077_n.png?v=1716643989413"/>
-        <video muted>
-            <source src="img/points_bg.mp4" type="video/mp4">
+        
+        <video class='buzz-team' id='buzz-team-1' muted>
+            <source src="https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/444190760_8046847342001182_7365345051950538070_n.mp4?v=1716643986468" type="video/mp4">
+        </video>
+        
+        <video class='buzz-team' id='buzz-team-2' muted>
+            <source src="https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/444190894_6771311472972289_6357744040067986937_n.mp4?v=1716643988156" type="video/mp4">
         </video>
       </div>
     </body>
