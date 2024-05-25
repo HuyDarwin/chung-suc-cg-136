@@ -671,7 +671,11 @@ input{
 }
 
 #reset-buzz{
-  
+  left:25%;
+  width:25%;
+  height:25%;
+  top:15%;
+  font-size:0.8vw;
 }
 
 #h6-hold-2{
