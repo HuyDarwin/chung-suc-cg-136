@@ -1,0 +1,16 @@
+.holder{
+    width:100%;
+    height:100%;
+}
+
+.holder-bg{
+    width:100%;
+    height:100%;
+}
+
+#buzzer-set-holder video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
