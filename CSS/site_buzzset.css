@@ -1,3 +1,64 @@
+button {
+	background-color:black;
+	color:white;
+	text-align:center;
+	font-family:'Aptos';
+	font-size:1.5vw;
+	font-weight: bold;
+	border:0.1vw solid white;
+	cursor: pointer;
+}
+
+button:not(:disabled):hover {
+	background-color:rgb(3, 37, 3);
+	color:white;
+	transition: 0.25s;
+}
+
+button:disabled {
+	color:gray;
+	border:0.1vw solid gray;
+	cursor:auto;
+}
+
+textarea {
+	resize:none;
+	font-family:'Aptos';
+	font-size:1.5vw;
+	background-color:black;
+	color:white;
+	border-radius:0;
+  white-space: pre-line;
+	border:0.1vw solid white;
+}
+
+label{
+	font-family:'Aptos';
+	font-size:1vw;
+	color:white;
+	font-weight: bold;
+}
+
+a{
+	font-family:'Aptos';
+	font-size:1vw;
+	color:white;
+	font-weight: bold;
+}
+
+input{
+    color:white;
+    font-family:Aptos;
+    font-weight:bold;
+    font-size:1vw;
+}
+
+#bg{
+    width:100%;
+    height:100%;
+    filter: blur(2px) brightness(25%);
+}
+
 .holder{
     width:100%;
     height:100%;
@@ -14,4 +75,20 @@
     object-fit: cover;
     z-index: 0;
     opacity: 0;
+}
+
+.who-buzzers{
+  width:99%;
+  height:10%;
+  left:0.25%;
+  top:0.5%;
+  font-size:3.5vw;
+}
+
+.buzzer{
+  width:99%;
+  height:87%;
+  left:0.25%;
+  top:12%;
+  font-size:8vw;
 }
