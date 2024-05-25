@@ -79,6 +79,11 @@ $(function () {
                 }             
             }
           
+            if(data.buzzer_active == 1){
+              update(ref(db), { buzzer_enabled : 0 })
+              $('#is-locking-buzzer').prop('checked', true)
+            }
+          
             if(data.buzzer_team == 1) {
               $('.who-buzzers').html('Team 1: ')
               if(data.team_1_name != null){
