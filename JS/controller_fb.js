@@ -223,7 +223,8 @@ $(function () {
             $('#is-tripling').prop('checked', is_tripling)
             upd('is_adding_to_winning_team', is_adding_to_winning_team)
             $('#is-adding-to-winning-team').prop('checked', is_adding_to_winning_team)
-          
+            upd('buzzer_enabled', 0)
+            $('#is-locking-buzzer').prop('checked', true)
             upd('score_backdrop', 0)
             $('#score-backdrop').prop('checked', score_backdrop)
             dib('.reveal-ans')
@@ -546,17 +547,6 @@ $(function () {
             upd('is_adding_to_winning_team', this.checked)
         })
 
-        $('#is-locking-buzzer').change(function () {
-            if(this.checked){
-              buzzer_enabled = 0;
-              upd('buzzer_enabled', 0)
-            }
-            else{
-              buzzer_enabled = 1;
-              upd('buzzer_enabled', 1)
-            }
-        })
-
         $('#score-backdrop').change(function () {
             var bool;
             if (this.checked) {
@@ -847,6 +837,23 @@ $(function () {
             }
             upd('br_q_choosing', br_q_choosing)
             $('.br-q-choose').html('Question ' + br_q_choosing)
+        })
+      
+        //
+
+        $('#is-locking-buzzer').change(function () {
+            if(this.checked){
+              buzzer_enabled = 0;
+              upd('buzzer_enabled', 0)
+            }
+            else{
+              buzzer_enabled = 1;
+              upd('buzzer_enabled', 1)
+            }
+        })
+      
+        $('#reset-buzz').click(function(){
+          upd('buzzer_team',0)
         })
       
         //
