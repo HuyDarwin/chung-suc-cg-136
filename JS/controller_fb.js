@@ -78,6 +78,22 @@ $(function () {
                     $('#br-right-ans-' + i + ' .br-ans-score').html(eval('data.br_q_' + data.br_q_choosing + '_a_s_' + i))
                 }             
             }
+          
+            if(data.buzzer_team == 1) {
+              $('.who-buzzers').html('Team 1: ')
+              if(data.team_1_name != null){
+                $('.who-buzzers').html('Team 1: ' + data.team_1_name)
+              }
+            }
+            else if(data.buzzer_team == 2) {
+              $('.who-buzzers').html('Team 2: ')
+              if(data.team_2_name != null){
+                $('.who-buzzers').html('Team 2: ' + data.team_2_name)
+              }
+            }
+            else{
+              $('.who-buzzers').html('')
+            }
 
         });
 
@@ -108,6 +124,8 @@ $(function () {
         var score_backdrop;
 
         var br_q_choosing = 0;
+      
+        var buzzer_enabled = 0;
 
         //
 
@@ -205,6 +223,7 @@ $(function () {
             $('#is-tripling').prop('checked', is_tripling)
             upd('is_adding_to_winning_team', is_adding_to_winning_team)
             $('#is-adding-to-winning-team').prop('checked', is_adding_to_winning_team)
+          
             upd('score_backdrop', 0)
             $('#score-backdrop').prop('checked', score_backdrop)
             dib('.reveal-ans')
@@ -525,6 +544,17 @@ $(function () {
         $('#is-adding-to-winning-team').change(function () {
             is_adding_to_winning_team = this.checked;
             upd('is_adding_to_winning_team', this.checked)
+        })
+
+        $('#is-locking-buzzer').change(function () {
+            if(this.checked){
+              buzzer_enabled = 0;
+              upd('buzzer_enabled', 0)
+            }
+            else{
+              buzzer_enabled = 1;
+              upd('buzzer_enabled', 1)
+            }
         })
 
         $('#score-backdrop').change(function () {
@@ -943,6 +973,16 @@ $(function () {
                 if (data.is_adding_to_winning_team != null) {
                     is_adding_to_winning_team = data.is_adding_to_winning_team;
                     $('#is-adding-to-winning-team').prop('checked', is_adding_to_winning_team);
+                }
+
+                if (data.buzzer_enabled != null) {
+                    buzzer_enabled = data.buzzer_enabled;
+                    if(buzzer_enabled == 0){
+                      $('#is-locking-buzzer').prop('checked', true);
+                    }
+                    else if(buzzer_enabled == 1){
+                      $('#is-locking-buzzer').prop('checked', false);
+                    }
                 }
 
                 if (data.total_score != null) {
