@@ -37,13 +37,14 @@ $(function () {
         });
       
         $('.buzzer').click(function(){
-          update(ref(db), { buzzer_active : 1 })
           update(ref(db), { sd_buzzer : 1 })
           if(this.id == 'buzzer-1'){
             update(ref(db), { buzzer_team : 1 })
+            update(ref(db), { buzzer_active : 1 })
           }
           else if(this.id == 'buzzer-2'){
             update(ref(db), { buzzer_team : 2 })
+            update(ref(db), { buzzer_active : 2 })
           }
         })
       

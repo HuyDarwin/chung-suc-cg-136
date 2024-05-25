@@ -79,9 +79,10 @@ $(function () {
                 }             
             }
           
-            if(data.buzzer_active == 1){
+            if(data.buzzer_active == 1 || data.buzzer_active == 2){
               update(ref(db), { buzzer_enabled : 0 })
               $('#is-locking-buzzer').prop('checked', true)
+              //update(ref(db), { buzzer_active : 0 })
             }
           
             if(data.buzzer_team == 1) {
