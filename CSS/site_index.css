@@ -38,6 +38,10 @@ body{
     opacity:0;
 }
 
+#video-holder{
+    opacity:0;
+}
+
 .ans{
     width:29.5%;
     height:12.75%;

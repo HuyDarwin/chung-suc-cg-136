@@ -114,11 +114,6 @@ $(function () {
                 con.loadcamera(data.camera_url_input)
             }
           
-            if(data.sd_play_vid == 1) {
-              $('#video-1').play();
-              update(ref(db), { sd_play_vid : 0 })
-            }
-          
             if(data.scale_all_text == 1){
               con.scaletext()
               update(ref(db), { scale_all_text : 0 })
@@ -130,6 +125,30 @@ $(function () {
             $('#scoreboard-2 .scoreboard-team-score svg text').html(data.team_2_score)
           
             con.scaletext()
+          
+            if(data.sd_play_vid == 1) {
+              $('#video-holder').css('opacity',1)
+              $('#video-1').trigger('play');
+                $('#video-1')[0].playbackRate = 5;
+              $('#video-1').on('ended',function(){
+                $('#video-holder').css('opacity',0)
+                $('#video-1').trigger('pause');
+                $('#video-1')[0].currentTime = 0;
+              });
+              update(ref(db), { sd_play_vid : 0 })
+            }
+          
+            if(data.sd_play_vid == 1) {
+              $('#video-holder').css('opacity',1)
+              $('#video-1').trigger('play');
+                $('#video-1')[0].playbackRate = 5;
+              $('#video-1').on('ended',function(){
+                $('#video-holder').css('opacity',0)
+                $('#video-1').trigger('pause');
+                $('#video-1')[0].currentTime = 0;
+              });
+              update(ref(db), { sd_play_vid : 0 })
+            }
         });
       
       /*
