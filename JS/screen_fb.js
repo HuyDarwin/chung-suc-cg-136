@@ -114,6 +114,11 @@ $(function () {
                 con.loadcamera(data.camera_url_input)
             }
           
+            if(data.sd_play_vid == 1) {
+              $('#video-1').play();
+              update(ref(db), { sd_play_vid : 0 })
+            }
+          
             if(data.scale_all_text == 1){
               con.scaletext()
               update(ref(db), { scale_all_text : 0 })
