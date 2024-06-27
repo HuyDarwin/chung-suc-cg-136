@@ -129,7 +129,7 @@ $(function () {
             if(data.sd_play_vid == 1) {
               $('#video-holder').css('opacity',1)
               $('#video-1').trigger('play');
-                $('#video-1')[0].playbackRate = 5;
+                $('#video-1')[0].playbackRate = 1;
               $('#video-1').on('ended',function(){
                 $('#video-holder').css('opacity',0)
                 $('#video-1').trigger('pause');
@@ -138,7 +138,7 @@ $(function () {
               update(ref(db), { sd_play_vid : 0 })
             }
           
-            if(data.sd_play_vid == 1) {
+            if(data.sd_play_vid_2 == 1) {
               $('#video-holder').css('opacity',1)
               $('#video-1').trigger('play');
                 $('#video-1')[0].playbackRate = 5;
@@ -147,7 +147,7 @@ $(function () {
                 $('#video-1').trigger('pause');
                 $('#video-1')[0].currentTime = 0;
               });
-              update(ref(db), { sd_play_vid : 0 })
+              update(ref(db), { sd_play_vid_2 : 0 })
             }
         });
       
