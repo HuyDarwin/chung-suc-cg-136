@@ -203,9 +203,9 @@ $(function () {
             //con.scl('.timer');
             //con.scl('#team-1-score div');
             //con.scl('#team-2-score div');
-            //con.scl('#scoreboard-1 .scoreboard-team-name');
+            con.scl('#scoreboard-1 .scoreboard-team-name');
             //con.scl('#scoreboard-1 .scoreboard-team-score');
-            //con.scl('#scoreboard-2 .scoreboard-team-name');
+            con.scl('#scoreboard-2 .scoreboard-team-name');
             //con.scl('#scoreboard-2 .scoreboard-team-score');
         }
 
