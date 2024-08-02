@@ -100,12 +100,25 @@ $(function () {
             }     
           
             if(data.sd_timer_20s == 1){
-              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/Family_Feud_2010_file_FF201010.mp3?v=1715770709335',4)
+              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/Family_Feud_2010_file_FF201010.mp3?v=1715770709335',5)
               update(ref(db), { sd_timer_20s : 0 })
             }
             if(data.sd_timer_25s == 1){
-              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/Family_Feud_2010_file_FF201011.mp3?v=1715770710979',4)
+              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/Family_Feud_2010_file_FF201011.mp3?v=1715770710979',5)
               update(ref(db), { sd_timer_25s : 0 })
+            }
+          
+            if(data.sd_music_1 == 1){
+              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/y2mate.com%20-%20Cute%20Dog%20%20Cat%20Song.mp3?v=1722592830502',1)
+              update(ref(db), { sd_music_1 : 0 })
+            }
+            if(data.sd_music_2 == 1){
+              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/utomp3.com%20-%20miaw%20miaw%20miaw%20miaw%20sound%20sad%20viral%20tiktok.mp3?v=1722592838803',1)
+              update(ref(db), { sd_music_2 : 0 })
+            }
+            if(data.sd_music_3 == 1){
+              con.PlaySound('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/tuy%E1%BB%87t%20%C4%91%E1%BB%89nh%20song%20ca.mp3?v=1722593158648',1)
+              update(ref(db), { sd_music_3 : 0 })
             }
 
             if(data.sd_stop_sounds == 1){
