@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Screen</title>
+	
+        <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+        <script type="text/javascript" src="JS/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="JS/jquery.keyframes.min.js"></script>
+        <script type='module' src='JS/firebase.js'></script>	
+        <script type='module' src='JS/functions.js'></script>	
+        <script type="module" src="JS/sound_fb.js"></script>
+        <script type="module" src="JS/screen_fb.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+        <link rel="stylesheet" type="text/css" href="CSS/site.css">
+        <link rel="stylesheet" type="text/css" href="CSS/site_index.css">
+
+        <meta charset="UTF-8" />
+    </head>
+    <body onkeydown="if(!event.target.matches('input')&&!event.target.matches('textarea')&&event.keyCode != 122 && event.keyCode != 116 && event.keyCode != 17)return!1" oncontextmenu="return!1" onselectstart="return!1" ondragstart="return!1">
+        <div class="holder" id="main-qs-holder">
+            <img class="holder-bg" src="https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/440853263_1112613769964542_1028502335990234654_n.png?v=1715957464839"/>
+
+            <div class="ans" id="ans-1">
+                <div class="ans-back">
+                    <img class="ans-bg-2" src="img/ans_revealed.png"/>
+                    <div class="ans-text">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                    <div class="ans-score">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ans-front">
+                    <img class="ans-bg-1" src="img/ans.png"/>
+                    <img class="ans-iterator" src="img/ans_1.png"/>
+                </div>
+            </div>
+            <div class="ans" id="ans-2">
+                <div class="ans-back">
+                    <img class="ans-bg-2" src="img/ans_revealed.png"/>
+                    <div class="ans-text">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                    <div class="ans-score">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ans-front">
+                    <img class="ans-bg-1" src="img/ans.png"/>
+                    <img class="ans-iterator" src="img/ans_2.png"/>
+                </div>
+            </div>
+
+            <div class="ans" id="ans-3">
+                <div class="ans-back">
+                    <img class="ans-bg-2" src="img/ans_revealed.png"/>
+                    <div class="ans-text">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                    <div class="ans-score">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ans-front">
+                    <img class="ans-bg-1" src="img/ans.png"/>
+                    <img class="ans-iterator" src="img/ans_3.png"/>
+                </div>
+            </div>
+
+            <div class="ans" id="ans-4">
+                <div class="ans-back">
+                    <img class="ans-bg-2" src="img/ans_revealed.png"/>
+                    <div class="ans-text">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                    <div class="ans-score">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ans-front">
+                    <img class="ans-bg-1" src="img/ans.png"/>
+                    <img class="ans-iterator" src="img/ans_4.png"/>
+                </div>
+            </div>
+
+            <div class="ans" id="ans-5">
+                <div class="ans-back">
+                    <img class="ans-bg-2" src="img/ans_revealed.png"/>
+                    <div class="ans-text">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                    <div class="ans-score">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ans-front">
+                    <img class="ans-bg-1" src="img/ans.png"/>
+                    <img class="ans-iterator" src="img/ans_5.png"/>
+                </div>
+            </div>
+
+            <div class="ans" id="ans-6">
+                <div class="ans-back">
+                    <img class="ans-bg-2" src="img/ans_revealed.png"/>
+                    <div class="ans-text">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                    <div class="ans-score">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ans-front">
+                    <img class="ans-bg-1" src="img/ans.png"/>
+                    <img class="ans-iterator" src="img/ans_6.png"/>
+                </div>
+            </div>
+
+            <div class="ans" id="ans-7">
+                <div class="ans-back">
+                    <img class="ans-bg-2" src="img/ans_revealed.png"/>
+                    <div class="ans-text">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                    <div class="ans-score">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ans-front">
+                    <img class="ans-bg-1" src="img/ans.png"/>
+                    <img class="ans-iterator" src="img/ans_7.png"/>
+                </div>
+            </div>
+
+            <div class="ans" id="ans-8">
+                <div class="ans-back">
+                    <img class="ans-bg-2" src="img/ans_revealed.png"/>
+                    <div class="ans-text">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                    <div class="ans-score">
+                        <svg>
+                            <text x="50%" y="58%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                        </svg>
+                    </div>
+                </div>
+                <div class="ans-front">
+                    <img class="ans-bg-1" src="img/ans.png"/>
+                    <img class="ans-iterator" src="img/ans_8.png"/>
+                </div>
+            </div>     
+
+            <div class="question-score">
+                <video muted autoplay loop>
+                    <source src="img/points_bg.mp4" type="video/mp4">
+                </video>
+                <div>
+                    <svg>
+                        <text x="50%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div>
+                <img class="score-backdrop" src="img/titles.png" />
+            </div>
+            <div class="team-score" id="team-1-score">
+                <video muted autoplay loop>
+                    <source src="img/points_bg.mp4" type="video/mp4">
+                </video>
+                <div>
+                    <svg>
+                        <text x="50%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div>
+                <img class="score-backdrop" src="img/titles.png" />
+            </div>
+            <div class="team-score" id="team-2-score">
+                <video muted autoplay loop>
+                    <source src="img/points_bg.mp4" type="video/mp4">
+                </video>
+                <div>
+                    <svg>
+                        <text x="50%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div>
+                <img class="score-backdrop" src="img/titles.png" />
+            </div> 
+
+            <div class="red-cross">
+                <div id="rc-1">
+                    <img src="img/red_cross.png" style="left:8.25%;top:5%;" />
+                </div>
+                <div id="rc-2">
+                    <img src="img/red_cross.png" style="left:-16.5%;top:5%;" />
+                    <img src="img/red_cross.png" style="left:33.5%;top:5%;" />
+                </div>
+                <div id="rc-3">
+                    <img src="img/red_cross.png" style="left:-40.5%;top:5%;" />
+                    <img src="img/red_cross.png" style="left:8.25%;top:5%;" />
+                    <img src="img/red_cross.png" style="left:57%;top:5%;" />
+                </div>
+            </div>
+        </div>
+
+        <div class="holder" id="bonus-round-1-holder">
+            <img class="holder-bg" src="https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/440832121_1505705890359191_7628581287192839844_n.png?v=1715873604877"/>
+            <div class="br-ans" id="br-ans-1">
+                <div class="br-ans-text">
+                    <svg>
+                        <text x="0%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle"></text>
+                    </svg>
+                </div>
+                <div class="br-ans-score">
+                    <svg>
+                        <text x="48%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div> 
+                <img class="red-square" id="red-square-1" src="img/red_square.png"/>             
+            </div>
+            <div class="br-ans" id="br-ans-2">
+                <div class="br-ans-text">
+                    <svg>
+                        <text x="0%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle"></text>
+                    </svg>
+                </div>
+                <div class="br-ans-score">
+                    <svg>
+                        <text x="48%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div> 
+                <img class="red-square" id="red-square-2" src="img/red_square.png"/>             
+            </div>
+            <div class="br-ans" id="br-ans-3">
+                <div class="br-ans-text">
+                    <svg>
+                        <text x="0%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle"></text>
+                    </svg>
+                </div>
+                <div class="br-ans-score">
+                    <svg>
+                        <text x="48%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div> 
+                <img class="red-square" id="red-square-3" src="img/red_square.png"/>             
+            </div>
+            <div class="br-ans" id="br-ans-4">
+                <div class="br-ans-text">
+                    <svg>
+                        <text x="0%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle"></text>
+                    </svg>
+                </div>
+                <div class="br-ans-score">
+                    <svg>
+                        <text x="48%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div> 
+                <img class="red-square" id="red-square-4" src="img/red_square.png"/>             
+            </div>
+            <div class="br-ans" id="br-ans-5">
+                <div class="br-ans-text">
+                    <svg>
+                        <text x="0%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle"></text>
+                    </svg>
+                </div>
+                <div class="br-ans-score">
+                    <svg>
+                        <text x="48%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div> 
+                <img class="red-square" id="red-square-5" src="img/red_square.png"/>             
+            </div>
+            <div class="br-ans" id="br-ans-6">
+                <div class="br-ans-text">
+                    <svg>
+                        <text x="0%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle"></text>
+                    </svg>
+                </div>
+                <div class="br-ans-score">
+                    <svg>
+                        <text x="48%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div> 
+                <img class="red-square" id="red-square-6" src="img/red_square.png"/>             
+            </div>
+            <div class="br-ans" id="br-ans-7">
+                <div class="br-ans-text">
+                    <svg>
+                        <text x="0%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle"></text>
+                    </svg>
+                </div>
+                <div class="br-ans-score">
+                    <svg>
+                        <text x="48%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div> 
+                <img class="red-square" id="red-square-7" src="img/red_square.png"/>             
+            </div>
+            <div class="br-ans" id="br-ans-8">
+                <div class="br-ans-text">
+                    <svg>
+                        <text x="0%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle"></text>
+                    </svg>
+                </div>
+                <div class="br-ans-score">
+                    <svg>
+                        <text x="48%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div> 
+                <img class="red-square" id="red-square-8" src="img/red_square.png"/>             
+            </div>
+            <div class="br-ans" id="br-ans-9">
+                <div class="br-ans-text">
+                    <svg>
+                        <text x="0%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle"></text>
+                    </svg>
+                </div>
+                <div class="br-ans-score">
+                    <svg>
+                        <text x="48%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div> 
+                <img class="red-square" id="red-square-9" src="img/red_square.png"/>             
+            </div>
+            <div class="br-ans" id="br-ans-10">
+                <div class="br-ans-text">
+                    <svg>
+                        <text x="0%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle"></text>
+                    </svg>
+                </div>
+                <div class="br-ans-score">
+                    <svg>
+                        <text x="48%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div> 
+                <img class="red-square" id="red-square-10" src="img/red_square.png"/>             
+            </div>
+            <div class="br-total">
+                <div class="br-total-text">
+                    <svg>
+                        <text x="0%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle"></text>
+                    </svg>
+                </div>
+                <div class="br-total-score">
+                    <svg>
+                        <text x="48%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div>            
+            </div>
+
+            <div class="question-score" id="br-q-score">
+                <video muted autoplay loop>
+                    <source src="img/points_bg.mp4" type="video/mp4">
+                </video>
+                <div>
+                    <svg>
+                        <text x="50%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div>
+                <img class="score-backdrop" src="img/titles.png" />
+            </div>
+        </div>
+
+        <div class="holder" id="timer-holder">
+            <img class="timer-bg" src="img/intro_bg.png" />
+            <div style="left:0%;top:-150%;width:100%;height:100%;transform:scale(4)">
+              <img class="timer-gpx" src="img/timer.png"/>
+              <div class="timer">
+                  <svg>
+                      <text x="50%" y="50%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                  </svg>
+              </div>               
+            </div>
+        </div>
+
+        <div class="holder" id="score-holder">
+            <img class="score-bg" src="img/intro_bg.png" />
+
+            <div class="scoreboard" id="scoreboard-1">
+                <div class="scoreboard-team-name">
+                    <img style="width:100%;height:100%" src="img/cont.png" />
+                    <svg>
+                        <text x="50%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div>
+                <div class="scoreboard-team-score">
+                    <img style="width:100%;height:100%" src="img/timer.png" />
+                    <svg>
+                        <text x="50%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="scoreboard" id="scoreboard-2">
+                <div class="scoreboard-team-name">
+                    <img style="width:100%;height:100%" src="img/cont.png" />
+                    <svg>
+                        <text x="50%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div>
+                <div class="scoreboard-team-score">
+                    <img style="width:100%;height:100%" src="img/timer.png" />
+                    <svg>
+                        <text x="50%" y="55%" lengthAdjust="spacingAndGlyphs" dominant-baseline="middle" text-anchor="middle"></text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="holder" id="titles-holder">
+            <img class="titles" src="img/titles.png" />
+        </div>
+      
+        <div class="holder" id="video-holder">
+          
+          <video width="100%" height="100%" id="video-1" preload="auto">
+            <source src="https://cdn.glitch.me/d26ba743-6712-4bf4-b28e-013addcf9d55/MUA%20THANG%20SAU%20HOANG%20DINH%20HIEU.mp4?v=1719505213516" type="video/mp4">
+          </video>
+          
+          
+          <!--
+          <iframe id='video-1' src="https://www.youtube.com/embed/J_e4Uxrt7qs" width="100%" height="100%">
+            
+          </iframe>
+          -->
+        
+          
+        </div>
+    </body>
+</html>
