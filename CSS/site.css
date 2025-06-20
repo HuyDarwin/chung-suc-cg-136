@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'SFU Helvetica';
-    src: url('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/SFUHelveticaCondensed.woff2?v=1716511628558') format('woff2'),
-        url('https://cdn.glitch.global/d26ba743-6712-4bf4-b28e-013addcf9d55/SFUHelveticaCondensed.woff?v=1716511622870') format('woff');
+    src: url('../Fonts/SFUHelveticaCondensed.woff2') format('woff2'),
+        url('../Fonts/SFUHelveticaCondensed.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
